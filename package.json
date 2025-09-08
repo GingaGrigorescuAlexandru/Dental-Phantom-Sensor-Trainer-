@@ -1,0 +1,20 @@
+{
+  "name": "monitor-senzori",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "plotly.js-dist-min": "^2.30.0",
+    "serialport": "^13.0.0"
+  },
+  "devDependencies": {
+    "electron": "^38.0.0"
+  }
+}
