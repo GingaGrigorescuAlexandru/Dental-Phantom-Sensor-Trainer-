@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <title>Monitor Senzori</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="card temp-card">
+      <div id="graphTemp"></div>
+      <div id="tempAlert" class="alert"></div>
+      <div id="pulpAlert" class="alert"></div>
+      <!-- Tool status will be created dynamically -->
+      <div class="value">🌡️ Temperatură: <span id="tempVal">--</span></div>
+    </div>
+    
+    <div class="card press-card">
+      <div id="graphPress"></div>
+      <div id="pressAlert" class="alert"></div>
+      <div class="value">⏱️ Presiune: <span id="pressVal">--</span></div>
+    </div>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>

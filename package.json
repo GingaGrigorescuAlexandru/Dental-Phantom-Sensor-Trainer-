@@ -1,0 +1,44 @@
+{
+  "name": "monitor-senzori",
+  "version": "1.0.0",
+  "description": "Monitor Senzori Electron App",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "electron-builder"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^17.2.2",
+    "plotly.js-dist-min": "^2.30.0",
+    "pyserial": "^0.0.1-security",
+    "serialport": "^13.0.0",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "electron": "^38.0.0",
+    "electron-builder": "^25.0.0"
+  },
+  "build": {
+    "appId": "com.yourname.monitor-senzori",
+    "productName": "Monitor Senzori",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*",
+      ".env"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}
