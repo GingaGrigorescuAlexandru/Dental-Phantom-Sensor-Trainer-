@@ -6,8 +6,8 @@ let win;
 
 function createWindow() {
   win = new BrowserWindow({
-    width: 1920,
-    height: 1080,
+    width: 1280,
+    height: 720,
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
@@ -46,10 +46,10 @@ app.whenReady().then(() => {
       const temp = parseFloat(row["Temperatura (°C)"]);
       if(!isNaN(temp)) {
         console.log("[PARSED TEMP]", temp);
-        win.webContents.send('serial-data', `${temp.toFixed(2)},0`);
+        win.webContents.send('serial-data', `${temp.toFixed(2)}`);
       }
       index++;
-    }, 700); // 500 ms delay
+    }, 700); // 700 ms delay
 
     console.log('Excel file successfully processed');
   });

@@ -1,6 +1,5 @@
 .container {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
+  display: block;
   height: 100vh;
   margin: 0;
 }
@@ -13,14 +12,12 @@
 }
 
 .temp-card {
-  background: linear-gradient(180deg, #8b0000, #ff4d4d);
+  height: 100vh;
+  background: linear-gradient(180deg, #4da6ff, #80cfff);
 }
 
-.press-card {
-  background: linear-gradient(180deg, #cc5200, #ff944d);
-}
-
-#graphTemp, #graphPress {
+#graphTemp {
+  top: 50px;
   width: 100%;
   height: 80%;
   border-radius: 16px;
@@ -51,14 +48,15 @@
 }
 
 .alert#pulpAlert {
-  background: linear-gradient(135deg, red, #ff0066);
-  color: white;
-  font-size: 18px;
-  font-weight: bold;
+  background: linear-gradient(135deg, #b71c1c, #f44336); /* deep red gradient */
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
   text-align: center;
-  border: 2px solid white;
-  box-shadow: 0 0 20px rgba(255,0,102,0.7);
-  animation: pulse 0.5s infinite alternate;
+  border-radius: 8px;
+  padding: 10px 10px;
+  box-shadow: 0 0 15px rgba(244, 67, 54, 0.6); /* softer shadow */
+  animation: pulseSmooth 1s infinite alternate; /* slower, smoother animation */
 }
 
 @keyframes pulse {
@@ -70,13 +68,9 @@
   background: linear-gradient(180deg, #cc1a1a, #990000)!important;
 }
 
-.alert#pressAlert {
-  background: linear-gradient(180deg, #e67333, #b34700)!important;
-}
-
 #pulpAlert img {
-  width: 30px;
-  height: 30px;
+  width: 16px;
+  height: 16px;
   vertical-align: text-bottom; /* bottom of image aligned with text baseline */
   margin-right: 8px;
 }
@@ -95,3 +89,5 @@
   display: none;
   box-shadow: 0 0 10px rgba(0,128,255,0.7);
 }
+
+
